@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IPR1App.CurrencyConverterPage"
+             Title="Конвертер валют">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+            
+            <DatePicker x:Name="DatePicker" DateSelected="OnDateSelected" />
+
+            <Picker x:Name="CurrencyPicker" Title="Выберите валюту" SelectedIndexChanged="OnCurrencySelected" />
+
+            <Entry x:Name="BynEntry" Placeholder="Сумма в BYN" Keyboard="Numeric" TextChanged="OnBynTextChanged" />
+
+            <Entry x:Name="ForeignEntry" Placeholder="Сумма в валюте" Keyboard="Numeric" TextChanged="OnForeignTextChanged" />
+
+            <Label x:Name="RateLabel" Text="Курс: не загружен" FontSize="16" HorizontalOptions="Center" />
+            
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
